@@ -1,6 +1,52 @@
 <!DOCTYPE html>
 <html>
+<head>
+	<link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+	<style type="text/css">
+		body {
+			font-family: 'Indie Flower', cursive;
+		}
+		#how_much {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+		}
+
+		#how_about {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			margin-top: 60px;
+		}
+
+	</style>
+</head>
 <body>
-<h1>Some of that Yung Baby Slush, doe</h1>
+	<h1 id="how_much"></h1>
+
+	<div id="how_about">
+		<a href="http://howmuchdoesjoshwanttoworkrightnow.com/">How about Josh?</a>
+		<a href="http://howmuchdoeswillwanttoworkrightnow.com/">How about Will?</a>
+	</div>
+	<script type="text/javascript">
+		var messages = [
+			"not at all",
+			"not much",
+			"nope!",
+			"negative"
+		];
+
+		function rotate () {
+			var msgIdx = ~~(Math.random() * 10000) % messages.length;
+			document.getElementById("how_much").innerHTML = messages[msgIdx]
+		}
+
+		setInterval(rotate, 180);
+		rotate()
+	</script>
 </body>
 </html>
