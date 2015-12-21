@@ -46,12 +46,11 @@
 	<script type="text/javascript">
 		var messages = [
 			"not at all",
+			"not a lot"
 			"not much",
 			"not even a little",
-			"nill",
-			"null",
 			"nope!",
-			"negative"
+			"couldn't be less"
 		];
 
 		function rotate () {
@@ -59,7 +58,7 @@
 			document.getElementById("how_much").innerHTML = messages[msgIdx]
 		}
 
-		setInterval(rotate, 180);
+		setInterval(rotate, 250);
 		rotate()
 	</script>
 </body>
